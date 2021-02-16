@@ -24,6 +24,17 @@ const otherRoads = [
 /*
   Process the "otherRoads" array of strings so you can call addRoad for each pair of locations.
 */
+function processOtherRoads(arr) {
+  let container = [];
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    container = arr[i].split(' <=> ');
+    // console.log(container)
+    newArray.push(container[0], container[1]);
+  }
+  return newArray;
+}
 
+processOtherRoads(otherRoads);
 
 module.exports = addRoad;
